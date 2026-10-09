@@ -146,3 +146,5 @@ The database will automatically initialize in memory and seed all demo data.
 | **How are Admin and Homeowner roles separated?** | Spring Security enforces role-based endpoint security (`requestMatchers("/api/admin/**").hasRole("ADMIN")` and `requestMatchers("/api/homeowner/**").hasRole("HOMEOWNER")`). In React, the `ProtectedRoute` guard inspects the user's role and prevents cross-portal access. |
 | **How are IoT sensors simulated?** | A Spring `@Scheduled` service runs periodically in the background. It generates realistic variations in temperature and humidity, evaluates conditional automation rules (*e.g., turning on the AC if temperature exceeds 26°C*), and tracks power consumption logs for devices that are turned ON. |
 | **How do you handle API documentation?** | We integrated `springdoc-openapi-starter-webmvc-ui` (Swagger 3). It generates live interactive documentation with Bearer token authentication at `http://localhost:8080/swagger-ui/index.html`. |
+
+
